@@ -1,0 +1,53 @@
+php artisan make:controller  front\HomeMainController  创建控制器
+
+php artisan make:migration create_studebts_table --create=students //创建迁移文件
+php artisan migrate //创建表
+
+php artisan make:seeder StudentTableSeeder//填充数据
+php artisan db:seed --class=StudentTableSeeder//创建单个填充数据                php artisan db:seed //多个
+
+
+//
+队列应用
+QUEUE_DRIVER=database;
+php artisan queue:table;
+
+//文件上传
+ Storage::disk('upFiles')->put($upFile,file_get_contents($path));
+
+注册中间件 
+
+全局中间件
+
+如果你想要中间件在每一个 HTTP 请求期间被执行，只需要将相应的中间件类设置到 app/Http/Kernel.php 的数组属性 $middleware 中即可。
+
+
+blade中
+
+引用模板
+@extends("layouts.app");
+
+ @yield(*) //自定义内容区域
+    引用处用@section(*);
+
+缓存
+put();
+add();
+forever(）;永久缓存
+判断某个值是否存在 has('key');
+
+Cache::add('key1','val',10);//第三个值是时间  返回bool值
+
+取值
+pull::();取出来后 将 删除该数据
+
+删除
+forget();
+Cache::get('key1');
+
+abort('500');
+
+
+日志
+
+log=daily
