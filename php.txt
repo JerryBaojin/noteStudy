@@ -1,0 +1,6 @@
+<?php
+
+$callBack=$_GET['callback'];
+$data=array('a','b');
+
+echo $callBack.'('.json_encode($data).')';
