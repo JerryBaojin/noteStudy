@@ -1,3 +1,7 @@
 systemctl stop firewalld.service //stop firewall
 
+<<<<<<< HEAD
 vim set number
+=======
+service vsftpd start
+>>>>>>> e347ac1e34a730b4e2e9e652ce53d62d07e08322

@@ -1,0 +1,13 @@
+默认安装目录
+/usr/local
+
+www目录
+/home
+
+nginx
+
+loaction /{
+	proxy_set_header X-Forwadrded-For $remote_addr;
+	proxy_pass http://www.baidu.com;
+		//代理目录
+	}
