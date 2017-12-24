@@ -1,0 +1,8 @@
+docker pull --  name:tag
+
+ docker exec -it b531f5e4adf217064f3ade667d6e0357b48d88ec2eb19f737330c3ce57c13e06 bash  //进入指定容器的shell
+
+docker run -d -p 8080:80 nginx //指定docker映射端口
+
+ docker run  -d -P nginx  //随机指定映射端口
+
