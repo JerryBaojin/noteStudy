@@ -1,9 +1,0 @@
- 		var bak=this.arrs;
-                console.log(bak);
-                var a=bak.splice(0,1);//返回被删除的项 0->删除的位置，1->从该位置开始删除几项
-
-        var bak=this.arrs;//bak引用和this.arrs同一个数组
-
-
-	substring 删除字符串
-			splice 删除数组元素
