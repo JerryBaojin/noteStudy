@@ -1,5 +1,9 @@
 systemctl stop firewalld.service //stop firewall
 
+firewalld
+	Ìí¼Óduankou 
+		firewall-cmd --zone=public --add-port=80/tcp --permanent  
+
 <<<<<<< HEAD
 service vsftpd start
 

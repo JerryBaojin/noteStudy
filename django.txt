@@ -1,6 +1,9 @@
 django-admin.py startproject app //新建项目
 python manage.py startapp njrb //新建APP
 
+
+访问控制 settings.py allowed_hosts=[*]
+
 3. 创建数据库表 或 更改数据库表或字段
 Django 1.7.1及以上 用以下命令
 # 1. 创建更改的文件
