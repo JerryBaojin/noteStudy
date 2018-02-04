@@ -29,3 +29,5 @@ vim set number
 service vsftpd start
 >>>>>>> e347ac1e34a730b4e2e9e652ce53d62d07e08322
 >>>>>>> f87ee4ce5147bddd9ddb7a9f6702abcae2f105bd
+
+ netstat -anp|grep 8000 //²é¿´¶Ë¿Ú

@@ -14,3 +14,15 @@ python manage.py migrate
  
 旧版本的Django 1.6及以下用
 python manage.py syncdb
+
+
+
+//nginx 部署
+在项目根目录下新建 **.uwsgi.py
+pkill -f -9 uwsgi
+
+
+uwsgi --http 0.0.0.0:8000 --chdir bugger --module test_uwsgi --chmod-socket=666
+python manage.py collectstatic
+
+项目目录下 settings.py 管理所有应用
