@@ -1,0 +1,6 @@
+ALTER table table_name ADD INDEX ½¡Ãñ£¨column_list£©
+
+CREATE INDEX index_name ON table_name (column_list) 
+
+É¾³ýË÷Òý
+drop index index_name on table_name

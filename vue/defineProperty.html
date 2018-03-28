@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+
+</body>
+<script>
+function oberser(obj){
+  this.data=obj
+  this.listen(obj)
+}
+let p=oberser.prototype;
+p.listen=function(o){
+  let val;
+  for(let i in o){
+    if(o.hasOwnProperty(i)){//hasownProperty  对象本身的属性
+      val=o[i]
+
+      if(typeof val ==='object'){
+        new oberser(val)    //objec
+      }
+
+      this.binder(i,val)
+    }
+  }
+}
+p.binder=function(key,val){
+  Object.defineProperty(this.data,key,{
+    enumerable:true,//属性可否被枚举
+    configurable:true,//属性描述符能否生效
+      get: function () {
+           console.log('你访问了' + key);
+           return val
+       },
+       set: function (newVal) {
+           console.log('你设置了' + key);
+           console.log('新的' + key + ' = ' + newVal)
+           if (newVal === val) return;
+           val = newVal
+       }
+  })
+}
+
+
+let oc= {
+    user: {
+        name: "liangshaofeng",
+        age: "24"
+    },
+    address: {
+        city: "beijing"
+    }
+};
+
+let ob=new oberser(oc);
+
+</script>
+</html>
