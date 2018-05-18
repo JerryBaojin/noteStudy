@@ -1,5 +1,7 @@
 
-create TRIGGER `biu` AFTER insert on `biu`
+
+create TRIGGER `dati_record` AFTER INSERT on `dati_record`
 	for each row BEGIN
-	  INSERT INTO `userinfo` SET subscribe = NEW.id, creatTime=NEW.creatTime;
+		UPDATE `table_user` SET `scores`=scores+NEW.result,`counts`=counts+NEW.counts  WHERE uid=NEW.uid
 	END
+
