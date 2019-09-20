@@ -1,5 +1,0 @@
-
-create TRIGGER `biu` AFTER insert on `biu`
-	for each row BEGIN
-	  INSERT INTO `userinfo` SET subscribe = NEW.id, creatTime=NEW.creatTime;
-	END

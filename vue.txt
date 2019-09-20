@@ -1,5 +1,0 @@
-´ò°üÂ·¾¶
-
-config 
-	index.js     assetsPublicPath: 'foods',
-	main.js			base :"/weixin/"
