@@ -34,3 +34,6 @@
     4. 修改页面代码后，Webpack 监听到文件修改后，开始编译，编译完成后，发送 build 消息给客户端
     5. 客户端获取到hash，成功后客户端构造hot-update.js script链接，然后插入主文档
     6. hot-update.js 插入成功后，执行hotAPI 的 createRecord 和 reload方法，获取到 Vue 组件的 render方法，重新 render 组件， 继而实现 UI 无刷新更新。
+
+- sideEffects
+    1. package.json和webpack配置文件中的sideEffects虽然同名，但表示的意义不同。package.json的sideEffects：标识当前package.json所影响的项目，当中所有的代码是否有副作用默认true，表示当前项目中的代码有副作用webpack配置文件中的sideEffects：开启功能，是否移除无副作用的代码默认false，表示不移除无副作用的模块在production模式下自动开启。webpack不会识别代码是否有副作用，只会读取package.json的sideEffects字段。二者需要配合使用，才能处理无副作用的模块。
